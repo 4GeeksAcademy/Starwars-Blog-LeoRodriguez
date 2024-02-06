@@ -12,7 +12,7 @@ export const Navbar = () => {
 			<div className="ml-auto favorites">				
 		 	 <btn className="nav-item btn dropdown">
            		 <a className="nav-link dropdown-toggle favorites-list" href="#" data-bs-toggle="dropdown" aria-expanded="false">Favorites (0)</a>
-            	<ul class="dropdown-menu">
+            	<ul className="dropdown-menu">
              	 <li><a className="dropdown-item" href="#">Action</a></li>
            	     <li><a className="dropdown-item" href="#">Another action</a></li>
             	 <li><a className="dropdown-item" href="#">Something else here</a></li>
