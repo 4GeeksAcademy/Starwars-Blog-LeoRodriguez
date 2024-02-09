@@ -1,18 +1,18 @@
 import React from "react";
+import rigoImage from "../../img/rigo-baby.jpg";
 import "../../styles/home.css";
-import { Link, useParams } from "react-router-dom";
-
-
+import {CharacterList} from "../component/characterList"
+import {PlanetList} from "../component/planetList"
+import {StarshipsList} from "../component/starshipsList"
+import { Footer } from "../component/footer";
+import { Link } from "react-router-dom";
 
 export const Home = () => (
 
-	<div className="text-center mt-5">
-		
-			<Link to="/characters">
-			<button>Clik Me</button>
-			</Link>
-			
-			
+	<div className="container mt-5">
+		<CharacterList />
+		<PlanetList />
+		<StarshipsList />
+		<Footer />
 	</div>
-	
 );

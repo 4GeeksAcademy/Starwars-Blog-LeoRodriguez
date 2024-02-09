@@ -1,23 +1,40 @@
-import React from "react";
-import starwarsLogo from "../../img/starwarsLogo.png";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import "../../styles/home.css";
+import { Context } from "../store/appContext";
+
+import StarWarsImage from "../../img/starwarsLogo.png"
 
 export const Navbar = () => {
+
+	const { store, actions } = useContext(Context);
+
 	return (
 		<nav className="navbar navbar-light bg-light mb-3">
 			<Link to="/">
-				<img src={starwarsLogo} className="logo"/>
+				<span className="navbar-brand mb-0 h1 ms-5">
+					<img src={StarWarsImage} alt="Star Wars Logo" style={{ maxHeight: "50px" }} />
+				</span>
 			</Link>
-			<div className="ml-auto favorites">				
-		 	 <btn className="nav-item btn dropdown">
-           		 <a className="nav-link dropdown-toggle favorites-list" href="#" data-bs-toggle="dropdown" aria-expanded="false">Favorites (0)</a>
-            	<ul className="dropdown-menu">
-             	 <li><a className="dropdown-item" href="#">Action</a></li>
-           	     <li><a className="dropdown-item" href="#">Another action</a></li>
-            	 <li><a className="dropdown-item" href="#">Something else here</a></li>
-        		</ul>
-          	 </btn>
+			<div className="btn-group me-5">
+				<button type="button" className="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+					Favorites ({store.favoritesList.length})
+				</button>
+				<ul className="dropdown-menu dropdown-menu-end">
+					{store.favoritesList.length == 0 ?
+						<li className="d-flex justify-content-center">(empty)</li>
+						:
+						store.favoritesList.map((favorite, index) => (
+							<li key={index} className="d-flex">
+								<Link to={"/" + favorite.type + "Details/" + favorite.uid}>
+									<a className="dropdown-item text-primary" href="#">{favorite.name}</a>
+								</Link>
+								<button type="button" className="btn ms-auto" onClick={() => actions.removeFromFavorites({ type: favorite.type, uid: favorite.uid, name: favorite.name })}>
+									<i className="fa-solid fa-trash-can"></i>
+								</button>
+							</li>
+						))
+					}
+				</ul>
 			</div>
 		</nav>
 	);
