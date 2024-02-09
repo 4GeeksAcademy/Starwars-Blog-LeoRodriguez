@@ -10,7 +10,7 @@ export const StarshipsList = () => {
 
     return (
         <div className="my-5">
-            <h2 className="text-danger">Starships</h2>
+            <h2 className="text-warning">Starships</h2>
             {store.starshipsList.length == 0 ?
                 <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
                 :

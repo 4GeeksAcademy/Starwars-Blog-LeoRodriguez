@@ -52,8 +52,8 @@ export const StarshipDetails = () => {
                 </div>
             </div>
 
-            <div className="bg-danger m-2" style={{ height: "0.5px" }} ></div>
-            <table className="table text-danger table-borderless text-center">
+            <div className="bg-warning m-2" style={{ height: "0.5px" }} ></div>
+            <table className="table text-warning table-borderless text-center">
                 <thead>
                     <tr>
                         <th scope="col">Model</th>

@@ -10,7 +10,7 @@ export const CharacterList = () => {
 
     return (
         <div className="my-5">
-            <h2 className="text-danger">Characters</h2>
+            <h2 className="text-warning">Characters</h2>
             {store.characterList.length == 0 ?
                 <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
                 :

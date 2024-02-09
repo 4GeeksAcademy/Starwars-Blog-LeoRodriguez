@@ -1,0 +1,30 @@
+body{
+    background-color: #332941;
+}
+
+.navbar{
+    background-color: #F5F7F8;
+}
+
+.dropdown-toggle{
+    background-color: #332941;
+    color: #FFC107;
+}
+
+.dropdown-toggle:hover{
+    color: #FFC107;
+}
+
+.card{
+    background-color: #F5F7F8;
+    color: #FFC107;
+    border: none;
+}
+
+.learnMoreBtn{
+    background-color: #FFC107;
+}
+
+.footerP{
+    color: #FFC107;
+}

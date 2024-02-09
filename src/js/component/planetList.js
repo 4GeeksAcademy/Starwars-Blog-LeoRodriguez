@@ -10,7 +10,7 @@ export const PlanetList = () => {
 
     return (
         <div className="my-5">
-            <h2 className="text-danger">Planets</h2>
+            <h2 className="text-warning">Planets</h2>
             {store.planetsList.length == 0 ?
                 <div class="spinner-border" role="status"><span class="visually-hidden">Loading...</span></div>
                 :

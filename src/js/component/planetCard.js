@@ -22,7 +22,7 @@ export const PlanetCard = ({ name, population, terrain, uid }) => {
                 <p className="card-text my-0">Terrain: {terrain} </p>
                 <div className="d-flex">
                     <Link to={"/planetDetails/" + uid}>
-                        <button type="button" className="btn btn-outline-primary mt-3 me-2">Learn more!</button>
+                        <button type="button" className="btn btn-outline mt-3 me-2 learnMoreBtn">Learn more!</button>
                     </Link>
                     {found.length === 0 ?
                         <button type="button" className="btn btn-outline-warning mt-3 ms-auto" onClick={() => actions.addToFavorites({ type: "planet", uid: uid, name: name })}>
